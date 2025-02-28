@@ -129,6 +129,16 @@ header {
     margin-top: 1%;
 }
 
+.container-main-page {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 .download-btn{
     display: inline-block;
     margin-top: 10px;
@@ -202,23 +212,6 @@ header {
 
 .copy-btn.clicked {
     background-color: #ffffff;
-}
-
-/* Popup Message */
-.popup-message {
-    position: fixed;
-    bottom: -60px; /* Initially hidden below the screen */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #2c7a8d;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0; /* Hidden by default */
-    transition: bottom 0.3s ease, opacity 0.3s ease;
 }
 
 /* Slide-in animation */

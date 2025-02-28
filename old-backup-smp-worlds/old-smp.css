@@ -107,6 +107,16 @@ header {
     margin-top: 1%;
 }
 
+.container-smp {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 .info-detail{
     display: inline-block;
     margin-top: 10px;

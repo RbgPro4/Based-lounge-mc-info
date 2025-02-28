@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 15px;
+    background-color: #282a36;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;  /* Ensures the header stays on top of the loader */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#headericon {
+    vertical-align: middle; /* Keeps the icon aligned with the text */
+    height: 24px; /* Set to match the text size initially */
+    width: auto; /* Maintain the aspect ratio */
+    margin-right: 5px; /* Spacing between the icon and the text */
+    margin-bottom: 4px; /* Adjust if needed to align vertically */
+    transform: scale(1.6); /* Enlarge the icon without affecting layout */
+    transform-origin: center center; /* Ensure scaling is centered */
+}
+
+.box {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box h2 {
+    margin-top: 1%;
+}
+
+.box1 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box1 h2 {
+    margin-top: 0%;
+}
+
+.box2 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    
+}
+.box2 h2 {
+    margin-top: 1%;
+}
+
+.box3 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box3 h2 {
+    margin-top: 1%;
+}
+
+.box4 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box4 h2 {
+    margin-top: 1%;
+}
+
+.download-btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.download-btn:hover{
+    background-color: #35b158;
+}
+
+.info-detail{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.info-detail:hover{
+    background-color: #35b158;
+}
+
+.page-link-button {
+    display: flex;
+    margin-top: 0px;
+    padding: 10px 20px;
+    background-color: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center; /* Centers the button and IP box */
+}
+
+.page-link-button:hover {
+    background-color: #35b158;
+}
+
+.mod-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Ensures content is stacked vertically */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.mod-install {
+    background-color: #282a36;
+    padding: 20px 15px; /* Increased padding for better spacing inside */
+    border-radius: 8px;
+    text-align: left; /* Align text to the left for better readability */
+    font-weight: bold;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.6; /* Adjust line height for spacing between lines */
+    text-align: center;
+}
+
+.mod-install p {
+    margin-bottom: 10px; /* Adds space between paragraphs */
+}

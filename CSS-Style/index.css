@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 15px;
+    background-color: #282a36;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#headericon {
+    vertical-align: middle; /* Keeps the icon aligned with the text */
+    height: 24px; /* Set to match the text size initially */
+    width: auto; /* Maintain the aspect ratio */
+    margin-right: 5px; /* Spacing between the icon and the text */
+    margin-bottom: 4px; /* Adjust if needed to align vertically */
+    transform: scale(1.6); /* Enlarge the icon without affecting layout */
+    transform-origin: center center; /* Ensure scaling is centered */
+}
+
+.box {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box h2 {
+    margin-top: 1%;
+}
+
+.box1 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.box1 h2 {
+    margin-top: 0%;
+}
+
+.box2 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box2 h2 {
+    margin-top: 1%;
+}
+
+.box3 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    
+}
+.box3 h2 {
+    margin-top: 1%;
+}
+
+.download-btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.download-btn:hover{
+    background-color: #35b158;
+}
+
+.info-detail{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.info-detail:hover{
+    background-color: #35b158;
+}
+
+.ip-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center; /* Centers the button and IP box */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.ip-box {
+    background-color: #282a36;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.copy-btn {
+    display: inline-block;
+    margin-top: px;
+    padding: 10px 20px;
+    background-color: #4bc8e7;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+}
+.copy-btn:hover {
+    background-color: #52dafc;
+}
+
+.copy-btn.clicked {
+    background-color: #ffffff;
+}
+
+/* Popup Message */
+.popup-message {
+    position: fixed;
+    bottom: -60px; /* Initially hidden below the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c7a8d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Hidden by default */
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
+/* Slide-in animation */
+.popup-message.show {
+    bottom: 20px; /* Slide in from the bottom */
+    opacity: 1;  /* Make it visible */
+}

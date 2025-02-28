@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/Icons/Info.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS-Style/index.css">
+    <link rel="stylesheet" type="text/css" href="scripts/loader.css">
+    <title>Based Lounge Info</title>
+</head>
+<script>
+function copyIP() {
+    const ipText = document.getElementById("server-ip").innerText;
+    navigator.clipboard.writeText(ipText);
+
+    // Show the popup message
+    const popup = document.getElementById('popup-message');
+    popup.classList.add('show'); // Slide-in the message
+
+    // Hide the popup message after 2 seconds (or adjust as needed)
+    setTimeout(() => {
+        popup.classList.remove('show'); // Slide the message back down
+    }, 2000); // The message stays for 2 seconds
+}
+</script>
+<body>
+
+<!-- This is the loader for the page -->
+<div class="loader" id="loader">
+</div>
+
+<!-- This is the loader for the page -->
+<script src="scripts/page-loader.js"></script>
+
+
+    <header> 
+        <img id="headericon" src="/Icons/Info.png" alt="head-icon">
+        Based Lounge Minecraft Server & Info </header>
+    
+    <div class="container">
+        <div class="box">
+            <h2>All Mod Details</h2>
+            <p>Here you will find all the details <br>
+                about how to install the mods and which mods are 
+                used and active on the server.</p>
+            <a href="install-mods/install-info.html" class="info-detail">Find All Details Here</a>
+        </div>
+        <div class="box1">
+            <h2>🌐 - Minecraft Server IP - 🌐</h2>
+            <p>Server Closed<br>
+            Server Status: Offline 🔴</p>
+            
+            Server is currently offline until the <br>
+            community decides when to start again, <br>
+            untill then see you next time 👍<br>
+
+            <div class="ip-container">
+                <button class="copy-btn" onclick="copyIP()">Copy IP</button>
+                <div class="ip-box" id="server-ip">il-dis.gl.joinmc.link</div>
+            </div>
+        </div>
+        <div class="box2">
+            <h2>Old Backup SMP Worlds</h2>
+            <p>Here you can find all the Old Minecraft SMP Worlds, 
+            Some worlds used mods to be played but some of them 
+            are lost/unable to be retrieved.
+            </p>
+            <a href="old-backup-smp-worlds/old-smp.html" class="info-detail">Find All Details Here</a>
+        </div>
+        <div class="box3">
+            <h2>Everything was created by Billy</h2>
+            <p>If you have any questions or need assistance feel free to send me a message at discord.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide-in message -->
+    <div class="popup-message" id="popup-message">Successfully Copied ✅</div>
+  
+</body>
+</html>

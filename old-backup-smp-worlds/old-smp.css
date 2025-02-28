@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 15px;
+    background-color: #282a36;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#headericon {
+    vertical-align: middle; /* Keeps the icon aligned with the text */
+    height: 24px; /* Set to match the text size initially */
+    width: auto; /* Maintain the aspect ratio */
+    margin-right: 5px; /* Spacing between the icon and the text */
+    margin-bottom: 4px; /* Adjust if needed to align vertically */
+    transform: scale(1.6); /* Enlarge the icon without affecting layout */
+    transform-origin: center center; /* Ensure scaling is centered */
+}
+
+.box {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box h2 {
+    margin-top: 1%;
+}
+
+.box1 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box1 h2 {
+    margin-top: 0%;
+}
+
+.box2 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    
+}
+.box2 h2 {
+    margin-top: 1%;
+}
+
+.box3 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box3 h2 {
+    margin-top: 1%;
+}
+
+.box4 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box4 h2 {
+    margin-top: 1%;
+}
+
+.download-btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.download-btn:hover{
+    background-color: #35b158;
+}
+
+.info-detail{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.info-detail:hover{
+    background-color: #35b158;
+}
+
+/* Make sure the main container is a flexbox */
+.backup-smp-container {
+    display: flex;
+    flex-wrap: wrap; /* This allows items to go to the next line if needed */
+    gap: 15px;
+    justify-content: center; /* Center content inside the box */
+}
+
+/* Each world box */
+.smp1 {
+    background-color: #373a49;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(50% - 20px); /* Two boxes per row, adjust spacing */
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    transition: background 0.3s;
+}
+
+.smp1:hover{
+    background-color:#656a86
+}
+
+/* Responsive: Make them stack under each other when the screen is smaller */
+@media (max-width: 768px) {
+    .smp1 {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+/* World preview image */
+.smp1 img {
+    width: 140px;
+    height: 135px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Details on the right */
+.smp-details {
+    flex: 1;
+    text-align: left;
+}
+
+/* World name */
+.smp-details h3 {
+    margin: 0;
+    color: #50fa7b;
+}
+
+/* Description */
+.smp-details p {
+    margin: 5px 0;
+    color: #f8f8f2;
+}
+
+/* Download button */
+.download-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    text-align: center;
+    width: fit-content;
+}
+
+.download-btn:hover {
+    background-color: #35b158;
+}
+
+.links-btn{
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color */
+}

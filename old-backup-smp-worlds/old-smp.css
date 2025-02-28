@@ -38,6 +38,8 @@ header {
     margin-bottom: 4px; /* Adjust if needed to align vertically */
     transform: scale(1.6); /* Enlarge the icon without affecting layout */
     transform-origin: center center; /* Ensure scaling is centered */
+    border-radius: 50%; /* Makes the icon round */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
 }
 
 .box {

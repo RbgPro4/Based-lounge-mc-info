@@ -53,6 +53,7 @@ header {
     box-sizing: border-box;
     align-items: center;
     text-align: center;
+    border: 1px solid #35e5f1;
 }
 .box h2 {
     margin-top: 1%;
@@ -69,7 +70,7 @@ header {
     box-sizing: border-box;
     align-items: center;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
 }
 .box1 h2 {
     margin-top: 0%;
@@ -86,6 +87,7 @@ header {
     box-sizing: border-box;
     align-items: center;
     text-align: center;
+    border: 1px solid #25d434;
 }
 .box2 h2 {
     margin-top: 1%;
@@ -106,6 +108,24 @@ header {
     
 }
 .box3 h2 {
+    margin-top: 1%;
+}
+
+.box4 {
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    
+}
+.box4 h2 {
     margin-top: 1%;
 }
 
@@ -205,4 +225,58 @@ header {
 .popup-message.show {
     bottom: 20px; /* Slide in from the bottom */
     opacity: 1;  /* Make it visible */
+}
+
+.update-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Ensures content is stacked vertically */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.changes-container {
+    background-color: #282a36;
+    padding: 20px 15px; /* Increased padding for better spacing inside */
+    border-radius: 8px;
+    text-align: left; /* Align text to the left for better readability */
+    font-weight: bold;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.6; /* Adjust line height for spacing between lines */
+    text-align: center;
+}
+
+.changes-container p {
+    margin-bottom: 10px; /* Adds space between paragraphs */
+}
+
+.build-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Ensures content is stacked vertically */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.build-container-text {
+    background-color: #282a36;
+    padding: 20px 15px; /* Increased padding for better spacing inside */
+    border-radius: 8px;
+    text-align: left; /* Align text to the left for better readability */
+    font-weight: bold;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.6; /* Adjust line height for spacing between lines */
+    text-align: center;
+}
+
+.build-container-text p {
+    margin-bottom: 10px; /* Adds space between paragraphs */
 }

@@ -107,40 +107,6 @@ header {
     margin-top: 1%;
 }
 
-.box4 {
-    background-color: #44475a;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    flex: 1 1 300px;
-    min-width: 300px;
-    max-width: 100%;
-    box-sizing: border-box;
-    align-items: center;
-    text-align: center;
-}
-.box4 h2 {
-    margin-top: 1%;
-}
-
-.download-btn{
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #50fa7b;
-    color: #282a36;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s;
-    cursor: pointer;
-    border: none;
-}
-
-.download-btn:hover{
-    background-color: #35b158;
-}
-
 .info-detail{
     display: inline-block;
     margin-top: 10px;
@@ -159,12 +125,51 @@ header {
     background-color: #35b158;
 }
 
+
+
 /* Make sure the main container is a flexbox */
 .backup-smp-container {
     display: flex;
     flex-wrap: wrap; /* This allows items to go to the next line if needed */
     gap: 15px;
     justify-content: center; /* Center content inside the box */
+}
+
+.smp-details p {
+    max-height: 90px; /* Adjust as needed */
+    overflow-y: auto;
+    padding-right: 10px; /* Prevents text from overlapping scrollbar */
+    
+    /* Optional: Aesthetic enhancements */
+    background: rgba(0, 0, 0, 0.20); /* Light background for contrast */
+    border-radius: 5px;
+    padding: 7px;
+}
+
+@media (max-width: 768px) {
+    .smp-details p {
+        max-height: 60px; /* Adjust as needed */
+    }
+}
+
+/* Scrollbar Customization (for WebKit browsers) */
+.smp-details p::-webkit-scrollbar {
+    width: 8px; /* Slim scrollbar */
+}
+
+.smp-details p::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light background for the track */
+    border-radius: 5px;
+}
+
+.smp-details p::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Darker thumb for contrast */
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.smp-details p::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker when hovered */
 }
 
 /* Each world box */
@@ -201,15 +206,25 @@ header {
     object-fit: cover;
 }
 
+/* Adjust image size for mobile screens (max width 768px) */
+@media (max-width: 768px) {
+    .smp1 img {
+        width: 70px; /* Adjust as needed */
+        height: 100px; /* Adjust as needed */
+    }
+}
+
 /* Details on the right */
 .smp-details {
     flex: 1;
     text-align: left;
+
 }
 
 /* World name */
 .smp-details h3 {
     margin: 0;
+    padding-top: 5px; /* Adjust to fine-tune alignment */
     color: #50fa7b;
 }
 
@@ -217,24 +232,6 @@ header {
 .smp-details p {
     margin: 5px 0;
     color: #f8f8f2;
-}
-
-/* Download button */
-.download-btn {
-    display: inline-block;
-    padding: 8px 12px;
-    background-color: #50fa7b;
-    color: #282a36;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s;
-    text-align: center;
-    width: fit-content;
-}
-
-.download-btn:hover {
-    background-color: #35b158;
 }
 
 .links-btn{

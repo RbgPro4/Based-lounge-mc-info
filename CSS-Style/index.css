@@ -214,6 +214,23 @@ header {
     background-color: #ffffff;
 }
 
+/* Popup Message */
+.popup-message {
+    position: fixed;
+    bottom: -60px; /* Initially hidden below the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c7a8d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Hidden by default */
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
 /* Slide-in animation */
 .popup-message.show {
     bottom: 20px; /* Slide in from the bottom */

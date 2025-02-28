@@ -30,3 +30,9 @@
    transform: rotate(360deg);
   }
  }
+
+ .loading-text{
+  margin-bottom: -160px;
+  position: absolute;
+  color: rgb(83, 83, 83);
+ }

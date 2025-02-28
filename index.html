@@ -5,6 +5,7 @@
     <link rel="icon" type="image/x-icon" href="https://files.fm/thumb_show.php?i=4rvqxytfqm">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS-Style/index.css">
+    <link rel="stylesheet" type="text/css" href="scripts/popup-message.css">
     <link rel="stylesheet" type="text/css" href="scripts/loader.css">
     <title>Based Lounge Info</title>
 </head>
@@ -27,10 +28,21 @@ function copyIP() {
 
 <!-- This is the loader for the page -->
 <div class="loader" id="loader">
+    <p class="loading-text">It's Loading give it a sec</p>
 </div>
-
 <!-- This is the loader for the page -->
 <script src="scripts/page-loader.js"></script>
+
+<!-- Popup Message -->
+<div id="popup" class="popup-overlay">
+    <div class="popup-content">
+        <p id="popup-text1">Disclaimer</p>
+        <p id="popup-text2">This page is still under construction and currently it's only desktop supported, mobile devices may not show the content correctly, unless it's a tablet.</p>
+        <button id="closePopup">I Understand</button>
+    </div>
+</div>
+
+<script src="/scripts/popup-message.js"></script>
 
 
     <header> 

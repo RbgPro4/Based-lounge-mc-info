@@ -9,20 +9,30 @@
     <title>Based Lounge Info</title>
 </head>
 <script>
-function copyIP() {
+    function copyIP() {
     const ipText = document.getElementById("server-ip").innerText;
     navigator.clipboard.writeText(ipText);
 
-    // Show the popup message
-    const popup = document.getElementById('popup-message');
-    popup.classList.add('show'); // Slide-in the message
+    // Show the popup message (this is the original one with a timeout of 2 seconds)
+    const popupMessage = document.getElementById('popup-message');
+    popupMessage.classList.add('show'); // Slide-in the message
 
-    // Hide the popup message after 2 seconds (or adjust as needed)
+    // Hide the popup message after 2 seconds
     setTimeout(() => {
-        popup.classList.remove('show'); // Slide the message back down
+        popupMessage.classList.remove('show'); // Slide the message back down
     }, 2000); // The message stays for 2 seconds
+
+    // Show the overlay popup (this will stay open until the user clicks "I understand")
+    const popupOverlay = document.getElementById('popup-overlay');
+    popupOverlay.classList.add('show'); // Fade in the overlay
 }
-</script>
+
+function closePopup() {
+    // Hide the overlay when the "I understand" button is clicked
+    const popupOverlay = document.getElementById('popup-overlay');
+    popupOverlay.classList.remove('show'); // Fade out the overlay
+}
+    </script>
 <body>
 
 <!-- This is the loader for the page -->
@@ -33,7 +43,7 @@ function copyIP() {
 <script src="scripts/page-loader.js"></script>
 
     <header> 
-        <img id="headericon" src="https://files.fm/thumb_show.php?i=4rvqxytfqm" alt="head-icon">
+        <img id="headericon" src="https://files.fm/thumb_show.php?i=4rvqxytfqm">
         Based Lounge Minecraft Server & Info </header>
     
     <div class="container">
@@ -43,7 +53,7 @@ function copyIP() {
                 about how to install mods and which mods are 
                 used and active on the server.
                 <span id="span1" style="color: rgb(41, 243, 243);">Old SMP Mods installation guide is included</span></p>
-            <a href="install-mods/install-info.html" class="info-detail">Find All Details Here</a>
+            <a href="install-mods/install-info.html" data-custom-error="true" class="info-detail">Find All Details Here</a>
         </div>
         <div class="box1">
             <h2>🌐 - Minecraft Server IP - 🌐</h2>
@@ -65,9 +75,19 @@ function copyIP() {
             Some worlds used mods to be played but some of them 
             are lost/unable to be retrieved.
             </p>
-            <a href="old-backup-smp-worlds/old-smp.html" class="info-detail">Find All Details Here</a>
+            <a href="old-backup-smp-worlds/old-smp.html" data-custom-error="true" class="info-detail">Find All Details Here</a>
         </div>
     </div>
+
+            <!-- The pop-up overlay -->
+        <div id="popup-overlay">
+            <div class="popup-content">
+                <h5>Thank You For Your Interest</h5> 
+                <p>Sorry but the server is currently offline as the community has not yet decided when to start again.</p>
+                <button onclick="closePopup()">I understand</button>
+            </div>
+        </div>
+    
 
         <div class="container-main-page">
             <div class="box3">
@@ -109,6 +129,16 @@ function copyIP() {
         </div>
     <!-- Slide-in message -->
     <div class="popup-message" id="popup-message">Successfully Copied ✅</div>
-  
+
+    <!-- All errors will stack here -->
+    <div id="error-container"></div>
+
+    <!-- JavaScript to check image loading -->
+    <script src="page-scripts/verify-img.js"></script>
+    <script src="page-scripts/check-page.js"></script>
+    <script src="page-scripts/check-connection.js"></script>
+    <link rel="stylesheet" type="text/css" href="page-scripts/script.css">
+
+
 </body>
 </html>

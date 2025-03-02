@@ -1,0 +1,82 @@
+/* Error message container */
+#error-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    #error-container {
+      max-width: 300px; /* Adjust as needed */
+    }
+  }
+  
+  /* General error message styling */
+  .error-message {
+    background-color: rgba(220, 53, 69, 1);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 0.2s ease-out forwards;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  /* Success message styling */
+.success-message {
+  background-color: rgba(40, 167, 69, 1); /* Green for success */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeIn 0.2s ease-out forwards;
+  margin-bottom: 10px;
+  width: 100%;
+}
+  
+  /* Loading bar */
+  .loading-bar {
+    height: 5px;
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    width: 100%;
+    margin-top: 6px;
+    border-radius: 5px;
+    animation: loading-bar-animation 4s linear forwards;
+  }
+  
+  /* Fade in */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Loading bar shrinking */
+  @keyframes loading-bar-animation {
+    0% { width: 100%; }
+    100% { width: 0%; }
+  }
+  
+  /* Fade out smoothly */
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+
+  
+  

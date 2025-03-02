@@ -290,3 +290,80 @@ header {
 .build-container-text p {
     margin-bottom: 10px; /* Adds space between paragraphs */
 }
+
+
+/*pop up
+
+/* Style the overlay */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Fade in/out effect */
+    transform: scale(1.2); /* Start with the overlay smaller */
+}
+
+/* The content inside the popup */
+.popup-content {
+    background: #e6e6e6;
+    padding: 25px;
+    text-align: center;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start content as invisible */
+    transform: scale(0.95); /* Start slightly scaled down */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.popup-content h5 {
+    color: black;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px; /* Spacing between title and description */
+}
+
+.popup-content p {
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.popup-content button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.popup-content button:hover {
+    background-color: #45a049;
+}
+
+/* When the popup is shown */
+#popup-overlay.show {
+    opacity: 1;
+    visibility: visible; /* Make the overlay visible */
+    transition: opacity 0.5s ease, visibility 0s linear 0s; /* Fix delay in overlay */
+}
+
+#popup-overlay.show .popup-content {
+    opacity: 1; /* Make content visible */
+    transform: scale(1); /* Scale content to normal size */
+}
+
+
+

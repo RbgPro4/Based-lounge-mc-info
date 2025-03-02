@@ -298,7 +298,7 @@ header {
 #popup-overlay {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0px;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
@@ -310,6 +310,13 @@ header {
     visibility: hidden; /* Initially hidden */
     transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Fade in/out effect */
     transform: scale(1.2); /* Start with the overlay smaller */
+}
+
+@media (max-width: 768px) {
+    #popup-overlay {
+        transform: scale(1.0); /* Adjust size for smaller screens */
+        left: -9px;
+    }
 }
 
 /* The content inside the popup */

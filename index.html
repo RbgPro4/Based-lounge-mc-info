@@ -6,6 +6,12 @@
     <title>Loading...</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Prevent any scrolling */
+}
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #121212;
@@ -37,7 +43,7 @@
     </style>
     <script>
         function checkMainPage() {
-            setTimeout(async () => { // 1-second delay
+            setTimeout(async () => { // 1.9-second delay
                 try {
                     let response = await fetch('Main-page/index.html', { method: 'HEAD' });
                     if (response.ok) {
@@ -54,7 +60,7 @@
         function handleRetry() {
             document.getElementById('status').innerText = "Unable to load, Retrying...";
             setTimeout(() => {
-                document.getElementById('status').innerText = "Loading...";
+                document.getElementById('status').innerText = "Failed to load";
                 setTimeout(() => {
                     window.location.href = "issue/error.html"; // Redirect if it fails again
                 }, 2000);

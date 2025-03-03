@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <link rel="icon" type="image/x-icon" href="https://files.fm/thumb_show.php?i=btvw6mpd39">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="old-smp.css">
@@ -12,9 +15,14 @@
 </script>
 <body>
 
-<!-- This is the loader for the page -->
-<div class="loader" id="loader">
-    <p class="loading-text">It's Loading give it a sec</p>
+  <!-- This is the loader for the page -->
+  <div class="pageloader">
+    <div class="circleloader">
+        <svg viewBox="25 25 50 50">
+          <circle r="20" cy="50" cx="50"></circle>
+        </svg>
+    </div>
+    <div class="pageloader-text">BasedLounge: SMP Worlds</div>
 </div>
 
 <!-- This is the loader for the page -->
@@ -31,7 +39,7 @@
                 Some worlds used mods to be played but some of them 
                 are lost/unable to be retrieved.
                 </p>
-            <a href="../index.html" class="info-detail" id="load-button">Go To Main Page</a>
+            <a href="../Main-page/index.html" class="info-detail" id="load-button">Go To Main Page</a>
         </div>
         <div class="box1">
             <h2>How to Install the worlds</h2>
@@ -111,6 +119,20 @@
             </div>
         </div>
     </div>
+
+    <div class="container-connection">
+            <div class="box-connection">
+                    <div class="build-container">
+                        <div class="build-container-text">
+                            WebPage Connection Status
+                            <!-- Custom Div for Connection Status -->
+                            <div class="connection-text" id="connectiontext">
+                                Connection: Wait..<br>
+                                Ping: Wait..
+                            </div>
+                        </div>
+                    </div>
+            </div>
 
         <!-- All errors will stack here -->
         <div id="error-container"></div>

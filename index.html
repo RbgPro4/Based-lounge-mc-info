@@ -2,149 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="https://files.fm/thumb_show.php?i=4rvqxytfqm">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS-Style/index.css">
-    <link rel="stylesheet" type="text/css" href="scripts/loader.css">
-    <title>Based Lounge Info</title>
-</head>
-<script>
-    function copyIP() {
-    const ipText = document.getElementById("server-ip").innerText;
-    navigator.clipboard.writeText(ipText);
+    <title>Loading...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-top: 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        function checkMainPage() {
+            setTimeout(async () => { // 1-second delay
+                try {
+                    let response = await fetch('Main-page/index.html', { method: 'HEAD' });
+                    if (response.ok) {
+                        window.location.href = 'Main-page/index.html';
+                    } else {
+                        handleRetry();
+                    }
+                } catch (error) {
+                    handleRetry();
+                }
+            }, 1900); // 1.9-second delay before execution
+        }
 
-    // Show the popup message (this is the original one with a timeout of 2 seconds)
-    const popupMessage = document.getElementById('popup-message');
-    popupMessage.classList.add('show'); // Slide-in the message
+        function handleRetry() {
+            document.getElementById('status').innerText = "Unable to load, Retrying...";
+            setTimeout(() => {
+                document.getElementById('status').innerText = "Loading...";
+                setTimeout(() => {
+                    window.location.href = "issue/error.html"; // Redirect if it fails again
+                }, 2000);
+            }, 2000);
+        }
 
-    // Hide the popup message after 2 seconds
-    setTimeout(() => {
-        popupMessage.classList.remove('show'); // Slide the message back down
-    }, 2000); // The message stays for 2 seconds
-
-    // Show the overlay popup (this will stay open until the user clicks "I understand")
-    const popupOverlay = document.getElementById('popup-overlay');
-    popupOverlay.classList.add('show'); // Fade in the overlay
-}
-
-function closePopup() {
-    // Hide the overlay when the "I understand" button is clicked
-    const popupOverlay = document.getElementById('popup-overlay');
-    popupOverlay.classList.remove('show'); // Fade out the overlay
-}
+        window.onload = () => checkMainPage();
     </script>
+</head>
 <body>
-
-<!-- This is the loader for the page -->
-<div class="loader" id="loader">
-    <p class="loading-text">It's Loading give it a sec</p>
-</div>
-<!-- This is the loader for the page -->
-<script src="scripts/page-loader.js"></script>
-
-    <header> 
-        <img id="headericon" src="https://files.fm/thumb_show.php?i=4rvqxytfqm">
-        Based Lounge Minecraft Server & Info </header>
-    
-    <div class="container">
-        <div class="box">
-            <h2>All Mod Details</h2>
-            <p>Here you will find all the details <br>
-                about how to install mods and which mods are 
-                used and active on the server.
-                <span id="span1" style="color: rgb(41, 243, 243);">Old SMP Mods installation guide is included</span></p>
-            <a href="install-mods/install-info.html" data-custom-error="true" class="info-detail">Find All Details Here</a>
-        </div>
-        <div class="box1">
-            <h2>🌐 - Minecraft Server IP - 🌐</h2>
-            <p>Server Closed<br>
-            Server Status: <span id="span1" style="color: rgb(255, 122, 122);">Offline</span> 🔴</p>
-            
-            Server is currently offline until the <br>
-            community decides when to start again, <br>
-            untill then see you next time 👍<br>
-
-            <div class="ip-container">
-                <button class="copy-btn" onclick="copyIP()">Copy IP</button>
-                <div class="ip-box" id="server-ip">il-dis.gl.joinmc.link</div>
-            </div>
-        </div>
-        <div class="box2">
-            <h2>Old Backup SMP Worlds</h2>
-            <p>Here you can find all the Old Minecraft SMP Worlds, 
-            Some worlds used mods to be played but some of them 
-            are lost/unable to be retrieved.
-            </p>
-            <a href="old-backup-smp-worlds/old-smp.html" data-custom-error="true" class="info-detail">Find All Details Here</a>
-        </div>
-    </div>
-
-            <!-- The pop-up overlay -->
-        <div id="popup-overlay">
-            <div class="popup-content">
-                <h5>Thank You For Your Interest</h5> 
-                <p>Sorry but the server is currently offline as the community has not yet decided when to start again.</p>
-                <button onclick="closePopup()">I understand</button>
-            </div>
-        </div>
-    
-
-        <div class="container-main-page">
-            <div class="box3">
-                <h2>Everything was created by Billy</h2>
-                <p>
-                    <div class="build-container">
-                        <div class="build-container-text">
-                            <p>If you have any questions or need assistance feel free to send <br>
-                                me a message at discord.<br>
-                                also keep in mind this website is still <span id="span1" style="color: rgb(226, 114, 114);">under construction</span> <br>
-                                and only <span id="span1" style="color: rgb(40, 202, 202);">desktop mode is supported</span>,
-                                mobile devices may have trouble displaying the elements, except if its a tablet.<br>
-                                <span id="span1" style="color: rgb(226, 114, 114);">If you see any thing out of place of UI Errors Please report them to billy and include a screenshot of the problem</span></p>
-                        </div>
-                        <div class="build-container-text">
-                            <p> Everything here is made for helping the community and find the best details about how to install <span id="span1" style="color: rgb(40, 202, 202);">mod, optimize your game, and install old smp worlds + smp mods</span>
-                        </div>
-                    </div>
-            </div>
-            <div class="box4">
-                <h2>WebPage Updates/Changes</h2>
-                <p>
-                    <div class="update-container">
-                        <div class="changes-container"><span id="span1" style="color: rgb(20, 222, 248);">Changes</span>
-                            <p><span id="span1" style="color: rgb(20, 222, 248);">New </span>1: Added a container that will display the following errors if they occurred<br>
-                                <span id="span1" style="color: rgb(236, 147, 29);">The error messages are as followed</span><br>
-                                1: Connection was lost<br>
-                                2: Connection Restored<br>
-                                3: This Page Is Currently Been Updated, Please Stay Patient!<br>
-                                4: Page Cannot Be Reached, Check Your Connection<br>
-                                5: Some Elements Failed To Load, Please Refresh The Page<br>
-                                <span id="span1" style="color: rgb(20, 222, 248);">The Errors have a timer bar under that automatically disappear</span><br>
-                                The <span id="span1" style="color: #4bc8e7;">"copy IP"</span> button now has new pop up message that appears when you press on it
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="update-container">
-                        <div class="changes-container"><span id="span1" style="color: rgb(228, 41, 41);">Know Issues</span>
-                            <p>Currently nothing serious so far, but somethings still need a small adjustments. In the mean time the page is working good <br>
-                            </p>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    <!-- Slide-in message -->
-    <div class="popup-message" id="popup-message">Successfully Copied ✅</div>
-
-    <!-- All errors will stack here -->
-    <div id="error-container"></div>
-
-    <!-- JavaScript to check image loading -->
-    <script src="page-scripts/verify-img.js"></script>
-    <script src="page-scripts/check-page.js"></script>
-    <script src="page-scripts/check-connection.js"></script>
-    <link rel="stylesheet" type="text/css" href="page-scripts/script.css">
-
-
+    <h1 id="status">Loading...</h1>
+    <div class="loader"></div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #1e1e2e;
+    background-color: #121212;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
 header {
     width: 100%;
     padding: 15px;
-    background-color: #282a36;
+    background-color: #282829;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -44,7 +44,7 @@ header {
 }
 
 .box {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -60,7 +60,7 @@ header {
 }
 
 .box1 {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,7 +76,7 @@ header {
 }
 
 .box2 {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -93,7 +93,7 @@ header {
 }
 
 .box3 {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -109,7 +109,7 @@ header {
 }
 
 .box4 {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -138,7 +138,7 @@ header {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #50fa7b;
+    background-color: #46bbd8;
     color: #282a36;
     font-weight: bold;
     text-decoration: none;
@@ -149,7 +149,7 @@ header {
 }
 
 .download-btn:hover{
-    background-color: #35b158;
+    background-color: #8ad6e7;
 }
 
 .info-detail{
@@ -201,7 +201,7 @@ header {
 }
 
 .mod-install {
-    background-color: #282a36;
+    background-color: #383838;
     padding: 20px 15px; /* Increased padding for better spacing inside */
     border-radius: 8px;
     text-align: left; /* Align text to the left for better readability */
@@ -212,8 +212,121 @@ header {
     box-sizing: border-box;
     line-height: 1.6; /* Adjust line height for spacing between lines */
     text-align: center;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.5);
 }
 
 .mod-install p {
     margin-bottom: 10px; /* Adds space between paragraphs */
+}
+
+
+
+
+
+
+
+
+
+.show-all-button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+
+    /* Initially hidden */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    width: 50%; /* Adjust width */
+    margin: 10px auto;  /* Centers the button */
+    background: rgba(0, 0, 0, 0.20); /* Light background for contrast */
+}
+
+@media (max-width: 768px) {
+    .show-all-button {
+        width: 75%; /* Adjust width */
+    }
+}
+
+@media (max-width: 1044px) {
+    .show-all-button {
+        width: 80%; /* Adjust width */
+    }
+}
+
+/* Make it scrollable when expanded */
+.show-all-button.show {
+    max-height: 300px; /* Adjust height as needed */
+    opacity: 1;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+/* Scrollbar Customization (for WebKit browsers) */
+.show-all-button::-webkit-scrollbar {
+    width: 8px; /* Slim scrollbar */
+}
+
+.show-all-button::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light background for the track */
+    border-radius: 5px;
+}
+
+.show-all-button::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Darker thumb for contrast */
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.show-all-button::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker when hovered */
+}
+
+.show-all-button a {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 90%; /* Adjust width */
+    margin: 0px auto;  /* Centers the button */
+}
+
+@media (max-width: 768px) {
+    .show-all-button a {
+        width: 85%; /* Adjust width */
+    }
+}
+
+@media (max-width: 1044px) {
+    .show-all-button a {
+        width: 80%; /* Adjust width */
+    }
+}
+
+@media (max-width: 688px) {
+    .show-all-button a {
+        width: 85%; /* Adjust width */
+    }
+}
+
+.toggle-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #50fa7b;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 50%;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.toggle-btn:hover{
+    background-color: #35b158;
 }

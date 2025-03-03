@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #1e1e2e;
+    background-color: #121212;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
 header {
     width: 100%;
     padding: 15px;
-    background-color: #282a36;
+    background-color: #282829;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -43,7 +43,7 @@ header {
 }
 
 .box {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -59,7 +59,7 @@ header {
 }
 
 .box1 {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -75,7 +75,7 @@ header {
 }
 
 .box2 {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -92,7 +92,7 @@ header {
 }
 
 .box3 {
-    background-color: #44475a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -121,7 +121,7 @@ header {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #50fa7b;
+    background-color: #46bbd8;
     color: #282a36;
     font-weight: bold;
     text-decoration: none;
@@ -132,7 +132,7 @@ header {
 }
 
 .info-detail:hover{
-    background-color: #35b158;
+    background-color: #8ad6e7;
 }
 
 
@@ -184,7 +184,7 @@ header {
 
 /* Each world box */
 .smp1 {
-    background-color: #373a49;
+    background-color: #3f3f3f;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -235,7 +235,7 @@ header {
 .smp-details h3 {
     margin: 0;
     padding-top: 5px; /* Adjust to fine-tune alignment */
-    color: #50fa7b;
+    color: #4bc8e7;
 }
 
 /* Description */
@@ -247,4 +247,58 @@ header {
 .links-btn{
     text-decoration: none; /* Removes underline */
     color: inherit; /* Inherits the text color */
+}
+
+.container-connection {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box-connection{
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.box3 h2 {
+    margin-top: 1%;
+}
+
+.build-container {
+    /* Removed "display: flex;" */ 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Ensures content is stacked vertically */
+    gap: 10px;
+    /* Removed "margin-top: 15px;" */
+}
+
+.build-container-text {
+    background-color: #383838;
+    padding: 20px 15px; /* Increased padding for better spacing inside */
+    border-radius: 8px;
+    text-align: left; /* Align text to the left for better readability */
+    font-weight: bold;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.6; /* Adjust line height for spacing between lines */
+    text-align: center;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.5);
+}
+
+.build-container-text p {
+    margin-bottom: 10px; /* Adds space between paragraphs */
 }

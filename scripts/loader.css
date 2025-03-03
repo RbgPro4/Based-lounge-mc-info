@@ -1,38 +1,68 @@
-/* styles.css */
-.loader {
+.pageloader {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #1e1e2e; /* White background to cover the page */
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   z-index: 9999;
+   background-color: #121212; /* White background to cover the page */
 }
 
-/* Add your loader styles here (e.g., the loader animation) */
-.loader::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border-top: 2px solid #ffffff;
-  border-right: 2px solid transparent;
-  animation: spinner8217 0.8s linear infinite;
- }
- 
- @keyframes spinner8217 {
-  to {
-   transform: rotate(360deg);
-  }
- }
+.circleloader {
+  width: 3.25em; /* Adjust loader size as needed */
+  transform-origin: center;
+  margin-bottom: 20px; /* Adjust spacing between loader and text */
+  transform: scale(1.5); /* Adjust the scale factor as needed to make it bigger */
+}
 
- .loading-text{
-  margin-bottom: -160px;
-  position: absolute;
-  color: rgb(83, 83, 83);
- }
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+    }
+
+circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 4;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+
+.pageloader-text {
+  font-size: 36px; /* Adjust text size as needed */
+  font-family: Arial, sans-serif; /* Adjust font family as needed */
+  color: #ffffff; /* Adjust text color */
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); /* Add text shadow */
+  opacity: 1; /* Initially hide text */
+  animation: flicker .9s infinite; /* Flickering animation */
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: .4; }
+  50% { opacity: 1; }
+}

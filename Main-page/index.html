@@ -12,6 +12,13 @@
     <title>Based Lounge Info</title>
 </head>
 <script>
+    // Detect refresh using the Performance Navigation API
+    if (performance.navigation.type === 1) {
+        // If the page was refreshed, redirect to the checking page
+        window.location.href = "../index.html";
+    }
+</script>
+<script>
     function copyIP() {
     const ipText = document.getElementById("server-ip").innerText;
     navigator.clipboard.writeText(ipText);
@@ -53,7 +60,7 @@ function closePopup() {
 
     <header> 
         <img id="headericon" src="https://files.fm/thumb_show.php?i=4rvqxytfqm">
-        Based Lounge MC Server & Info </header>
+        BasedLounge MC Server & Info</header>
     
     <div class="container">
         <div class="box">
@@ -119,7 +126,8 @@ function closePopup() {
                             <!-- Custom Div for Connection Status -->
                             <div class="connection-text" id="connectiontext">
                                 Connection: Wait..<br>
-                                Ping: Wait..
+                                Ping: Wait..<br>
+                                Load Time: 
                             </div>
                         </div>
                     </div>
@@ -131,7 +139,8 @@ function closePopup() {
                         <div class="changes-container"><span id="span1" style="color: rgb(20, 222, 248);">Changes</span><br>
                             <span id="span1" style="color: rgb(20, 222, 248);">Latest Update 3/3</span>
                             <p><span id="span1" style="color: rgb(20, 222, 248);">New </span>1: Added a container that will display any errors if occurred<br>
-                                2:Added a new connection status that will show <span id="span1" style="color: rgb(20, 222, 248);">"Connection & Ping"</span><br>
+                                2:Added a new connection status that will show <span id="span1" style="color: rgb(20, 222, 248);">"Connection & Ping and Load Time"</span><br>
+                                <span id="span1" style="color: rgb(47, 230, 71);">"These are added for debugging"</span><br>
                                 "If the ping is higher than 150, connection will change from <span id="span1" style="color: #00e029;">"Good"</span> to <span id="span1" style="color: rgb(240, 155, 29);">"Weak"</span> and <span id="span1" style="color: rgb(243, 41, 41);">"Bad"</span> if its above 200"<br>
                                 3:UI changes in <span id="span1" style="color: rgb(20, 222, 248);">"Mod Details"</span>, All the used mods are now in a <span id="span1" style="color: #00e029;">"Show All"</span> button to make it more cleaner and added a scrollbar insted of been all visible<br>
                                 4:in <span id="span1" style="color: rgb(20, 222, 248)">"Mod Details"</span> theres now a button that appears at the bottom right of the screen that will let you scroll all the way on the top<br>

@@ -62,6 +62,12 @@ circle {
   animation: flicker .9s infinite; /* Flickering animation */
 }
 
+@media (max-width: 768px) {
+  .pageloader-text {
+    font-size: 28px; /* Adjust as needed */
+  }
+}
+
 @keyframes flicker {
   0%, 100% { opacity: .4; }
   50% { opacity: 1; }

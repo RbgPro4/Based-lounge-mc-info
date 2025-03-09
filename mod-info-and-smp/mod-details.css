@@ -1,0 +1,360 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #121212;
+    color: white;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+.sidebar {
+    width: 250px;
+    background: #1e1e1e;
+    padding: 15px;
+    position: fixed;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 10;
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+.sidebar.open {
+    transform: translateX(0);
+}
+/* Customize the scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #333; /* Background of the scrollbar track */
+    border-radius: 10px; /* Optional: rounded corners for the track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Optional: rounded corners for the thumb */
+    border: 2px solid #333; /* Optional: border around the thumb */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb when hovered */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+    @media (max-width: 768px) {
+        .overlay {
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+    }
+}
+.menu-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #0065d1; /* Button color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+.menu-toggle:hover{
+    background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+    opacity: 1;
+}
+}
+
+.menu {
+    display: block;
+    flex-direction: column;
+}
+.box {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #292929;
+    border-radius: 10px;
+}
+.box h2{
+    margin-top: 0; /* Remove any margin from the top */
+    margin-bottom: 10px; /* Optional: Adjust the bottom margin for spacing */
+}
+.menu hr{
+    width: 100px;
+    margin: 20px auto; /* Adds spacing and centers the line */
+    border: none; /* Removes default border */
+    height: 2px; /* Adjust thickness */
+    background-color: #fff; /* Set color to match design */
+}
+main {
+    padding: 20px;
+    flex-grow: 1;
+    margin-left: 0;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-out;
+}
+main h1{
+    text-align: center;
+}
+.all-mod-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 15px;
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .all-mod-info {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust for smaller screens */
+    }
+  }
+
+.info-1 {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    line-height: 1.3; /* Adjust line height for spacing between lines */
+}
+.info-1 h3 {
+    margin-top: 0;
+    color: #007bff;
+    text-align: center;
+}
+.btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex; /* Change from block to flex */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    width: 100%; /* Ensure it takes the full width */
+    box-sizing: border-box; /* Prevent width issues due to padding */
+    margin-top: 10px;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color */
+    border-radius: 10px;
+}
+
+
+@media (min-width: 768px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+    main {
+        margin-left: 270px;
+    }
+}
+
+
+.mod-install-selection3 {
+    background-color: #333;
+    font-weight: bold;
+    line-height: 1.3; /* Adjust line height for spacing between lines */
+    text-align: center;
+    text-align: left;
+}
+/* Initial state of the section */
+#section3 {
+    background-color: #333; /* Original background color */
+}
+
+/* Background color change when section is highlighted */
+#section3.highlight {
+    animation: colorChange 2s ease-out 4; /* Apply background color change 4 times */
+}
+
+/* Keyframes for background color change */
+@keyframes colorChange {
+    0% {
+        background-color: #333; /* Original color */
+    }
+    25% {
+        background-color: #7a7a7a; /* Lightened color */
+    }
+    50% {
+        background-color: #333; /* Back to original color */
+    }
+    75% {
+        background-color: #7a7a7a; /* Lightened color */
+    }
+    100% {
+        background-color: #333; /* Back to original color */
+    }
+}
+
+/* Apply the background color change to inner elements of section 3 */
+#section3.highlight .info-1,
+#section3.highlight .mod-install-selection3 {
+    background-color: #333; /* Original background color for inner elements */
+    animation: colorChange 2s ease-out 4; /* Apply animation to inner elements */
+}
+
+
+.world-install-selection4 {
+    background-color: #333;
+    font-weight: bold;
+    line-height: 1.3; /* Adjust line height for spacing between lines */
+    text-align: center;
+    text-align: left;
+}
+/* Initial state of the section */
+#section4 {
+    background-color: #333; /* Original background color */
+}
+
+/* Background color change when section is highlighted */
+#section4.highlight {
+    animation: colorChange 2s ease-out 4; /* Apply background color change 4 times */
+}
+
+/* Keyframes for background color change */
+@keyframes colorChange {
+    0% {
+        background-color: #333; /* Original color */
+    }
+    25% {
+        background-color: #686868; /* Lightened color */
+    }
+    50% {
+        background-color: #333; /* Back to original color */
+    }
+    75% {
+        background-color: #686868; /* Lightened color */
+    }
+    100% {
+        background-color: #333; /* Back to original color */
+    }
+}
+
+/* Apply the same background color change to inner elements */
+#section4.highlight .info-1,
+#section4.highlight .world-install-selection4 {
+    animation: colorChange 2s ease-out 4; /* Apply the background color change to text content */
+}
+
+
+.info-2 {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3; /* Adjust line height for spacing between lines */
+}
+.info-2 h3 {
+    margin-top: 0;
+    color: #007bff;
+    text-align: center;
+}
+
+.show-all-button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    width: 90%; /* Adjust width */
+    margin: 10px auto;  /* Centers the button */
+    background: rgba(0, 0, 0, 0.20); /* Light background for contrast */
+    max-height: 320px; /* Adjust height as needed */
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .show-all-button {
+        width: 85%; /* Adjust width */
+    }
+}
+
+@media (max-width: 1044px) {
+    .show-all-button {
+        width: 90%; /* Adjust width */
+    }
+}
+
+/* Scrollbar Customization (for WebKit browsers) */
+.show-all-button::-webkit-scrollbar {
+    width: 8px; /* Slim scrollbar */
+}
+
+.show-all-button::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light background for the track */
+    border-radius: 5px;
+}
+
+.show-all-button::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Darker thumb for contrast */
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.show-all-button::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker when hovered */
+}
+
+.show-all-button a {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 85%; /* Adjust width */
+    margin: 0px auto;  /* Centers the button */
+}
+
+@media (max-width: 768px) {
+    .show-all-button a {
+        width: 85%; /* Adjust width */
+    }
+}
+
+@media (max-width: 1044px) {
+    .show-all-button a {
+        width: 90%; /* Adjust width */
+    }
+}
+
+@media (max-width: 688px) {
+    .show-all-button a {
+        width: 80%; /* Adjust width */
+    }
+}

@@ -155,18 +155,29 @@
                     </div>
                 </div>
     
-                <div class="mod-container">
-                    <div class="mod-install">
-                        <span id="span2" style="color: rgb(20, 222, 248);">How to install SMP Backup Mods</span>
-                        <p>1: Install Fabric or Forge (you can find which mod loader each world uses in the description of the world).<br>
-                           2: Then download the mod folder that was included with the SMP world (it's in the description).<br>
-                           3: Extract the mods folder and drag all the mods into your <span id="span1" style="color: rgb(20, 222, 248);">.minecraft/mods</span> folder. <br>
-                           <span id="span3" style="color: rgb(38, 226, 78);">"To find your <span id="span1" style="color: rgb(20, 222, 248);">.minecraft/mods</span>, simply press the search on Windows and type <span id="span1" style="color: rgb(20, 222, 248);">"%appdata%"</span>.</span><br>
-                           4: After that, go to the Minecraft launcher and select Fabric or Forge (usually, it selects automatically when you install the mod loader). <br>
-                           5: That's it! Just press Play and enjoy the worlds ✅ <br>
-                        </p>
+                    <div class="mod-container">
+                        <div class="mod-install-selection3" id="section3">
+                            <span id="span2" style="color: rgb(20, 222, 248);">How to install SMP Backup Mods</span>
+                            <p>1: Install Fabric or Forge (you can find which mod loader each world uses in the description of the world).<br>
+                            2: Then download the mod folder that was included with the SMP world (it's in the description).<br>
+                            3: Extract the mods folder and drag all the mods into your <span id="span1" style="color: rgb(20, 222, 248);">.minecraft/mods</span> folder. <br>
+                            <span id="span3" style="color: rgb(38, 226, 78);">"To find your <span id="span1" style="color: rgb(20, 222, 248);">.minecraft/mods</span>, simply press the search on Windows and type <span id="span1" style="color: rgb(20, 222, 248);">"%appdata%"</span>.</span><br>
+                            4: After that, go to the Minecraft launcher and select Fabric or Forge (usually, it selects automatically when you install the mod loader). <br>
+                            5: That's it! Just press Play and enjoy the worlds ✅ <br>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                    <div class="mod-container">
+                        <div class="world-install-selection4" id="section4">
+                            <span id="span2" style="color: rgb(20, 222, 248);">How to install Backup SMP Worlds</span>
+                            <p>1: Download the world of your choice.<br>
+                            2: After Downloading extract the folder (or you can simply open it directly).<br>
+                            3: after extracting drag the extracted folder in your <span id="span1" style="color: rgb(20, 222, 248);">.minecraft/saves</span> folder. <br>
+                            <span id="span3" style="color: rgb(38, 226, 78);">"To find your <span id="span1" style="color: rgb(20, 222, 248);">.minecraft/saves</span>, simply press the search on Windows and type <span id="span1" style="color: rgb(20, 222, 248);">"%appdata%"</span>.</span><br>
+                            4: After that, your ready to go and enjoy the map ✅<br>
+                            </p>
+                        </div>
+                    </div>
                 <div class="mod-container">
                     <div class="mod-install">
                         WebPage Connection Status
@@ -198,5 +209,33 @@
   <script src="../page-scripts/scrollToTopBtn.js"></script>
   <link rel="stylesheet" type="text/css" href="../page-scripts/scrollToTopBtn.css">
 
+
+  <script>
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if there's a hash in the URL (i.e., we came from a link)
+    if (window.location.hash) {
+        const targetId = window.location.hash;
+        const targetElement = document.querySelector(targetId);
+
+        // Smooth scroll to the target element
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Add the "highlight" class to trigger the background color change animation
+            targetElement.classList.add('highlight');
+
+            // Add the outline class to create the adjustable border behind the object
+            targetElement.classList.add('outline');
+
+            // Remove the highlight and outline after 8 seconds (optional)
+            setTimeout(() => {
+                targetElement.classList.remove('highlight');
+                targetElement.classList.remove('outline');
+            }, 8000); // Glowing and outline last for 8 seconds
+        }
+    }
+});
+  </script>
 </body>
 </html>

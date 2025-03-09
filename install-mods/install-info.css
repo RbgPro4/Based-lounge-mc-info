@@ -219,6 +219,101 @@ header {
     margin-bottom: 10px; /* Adds space between paragraphs */
 }
 
+.mod-install-selection3 {
+    background-color: #383838;
+    padding: 20px 15px; /* Increased padding for better spacing inside */
+    border-radius: 8px;
+    text-align: left; /* Align text to the left for better readability */
+    font-weight: bold;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.6; /* Adjust line height for spacing between lines */
+    text-align: center;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.5);
+}
+
+.mod-install-selection3 p {
+    margin-bottom: 10px; /* Adds space between paragraphs */
+}
+/* Initial state of the section */
+#section3 {
+    padding: 20px 15px;
+    background-color: #383838; /* Original background color */
+}
+
+/* Background color change when section is highlighted */
+#section3.highlight {
+    animation: colorChange 2s ease-out 4; /* Apply background color change 4 times */
+}
+
+/* Keyframes for background color change */
+@keyframes colorChange {
+    0% {
+        background-color: #383838; /* Original color */
+    }
+    25% {
+        background-color: #7a7a7a; /* Lightened color */
+    }
+    50% {
+        background-color: #383838; /* Back to original color */
+    }
+    75% {
+        background-color: #7a7a7a; /* Lightened color */
+    }
+    100% {
+        background-color: #383838; /* Back to original color */
+    }
+}
+
+.world-install-selection4 {
+    background-color: #383838;
+    padding: 20px 15px; /* Increased padding for better spacing inside */
+    border-radius: 8px;
+    text-align: left; /* Align text to the left for better readability */
+    font-weight: bold;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.6; /* Adjust line height for spacing between lines */
+    text-align: center;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.5);
+}
+
+.world-install-selection4 p {
+    margin-bottom: 10px; /* Adds space between paragraphs */
+}
+/* Initial state of the section */
+#section4 {
+    padding: 20px 15px;
+    background-color: #383838; /* Original background color */
+}
+
+/* Background color change when section is highlighted */
+#section4.highlight {
+    animation: colorChange 2s ease-out 4; /* Apply background color change 4 times */
+}
+
+/* Keyframes for background color change */
+@keyframes colorChange {
+    0% {
+        background-color: #383838; /* Original color */
+    }
+    25% {
+        background-color: #686868; /* Lightened color */
+    }
+    50% {
+        background-color: #383838; /* Back to original color */
+    }
+    75% {
+        background-color: #686868; /* Lightened color */
+    }
+    100% {
+        background-color: #383838; /* Back to original color */
+    }
+}
 
 
 

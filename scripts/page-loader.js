@@ -21,6 +21,6 @@ setTimeout(showLoader, 1000);
 
 // Call the fadeOutLoader function when the page is fully loaded with a 1-second delay
 window.addEventListener('load', () => {
-  setTimeout(fadeOutLoader, 2000);
+  setTimeout(fadeOutLoader, 1500);
 });
 

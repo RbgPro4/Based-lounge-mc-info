@@ -1,0 +1,54 @@
+  /* Add this CSS to your existing styles */
+
+  /* Pop-up styles */
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0; /* Start with opacity 0 (invisible) */
+    transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+    pointer-events: none; /* Disable pointer events when the pop-up is invisible */
+  }
+  
+  .popup-container.active {
+    opacity: 1; /* When the pop-up is active, set opacity to 1 (visible) */
+    pointer-events: auto; /* Enable pointer events when the pop-up is visible */
+  }
+  
+  .popup-message {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    text-align: center;
+    color:black;
+    font-size: 17px;
+  }
+  
+  .popup-message p {
+    margin-bottom: 25px;
+  }
+  
+  .popup-message button {
+    background-color: #1d1d1d;
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Increase padding for a bigger button */
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px; /* Increase font size for better visibility */
+    font-weight: bold; /* Optionally, add font-weight for emphasis */
+    transition: background 0.3s;
+  }
+  
+  .popup-message button:hover {
+    background-color: #444;
+  }

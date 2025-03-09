@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #121212;
+    color: white;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+.sidebar {
+    width: 250px;
+    background: #1e1e1e;
+    padding: 15px;
+    position: fixed;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 10;
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+.sidebar.open {
+    transform: translateX(0);
+}
+/* Customize the scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #333; /* Background of the scrollbar track */
+    border-radius: 10px; /* Optional: rounded corners for the track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Optional: rounded corners for the thumb */
+    border: 2px solid #333; /* Optional: border around the thumb */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb when hovered */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+    @media (max-width: 768px) {
+        .overlay {
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+    }
+}
+.menu-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #0065d1; /* Button color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+.menu-toggle:hover{
+    background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+    opacity: 1;
+}
+}
+
+.menu {
+    display: block;
+    flex-direction: column;
+}
+.box {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #292929;
+    border-radius: 10px;
+}
+.box h2{
+    margin-top: 0; /* Remove any margin from the top */
+    margin-bottom: 10px; /* Optional: Adjust the bottom margin for spacing */
+}
+.menu hr{
+    width: 100px;
+    margin: 20px auto; /* Adds spacing and centers the line */
+    border: none; /* Removes default border */
+    height: 2px; /* Adjust thickness */
+    background-color: #fff; /* Set color to match design */
+}
+main {
+    padding: 20px;
+    flex-grow: 1;
+    margin-left: 0;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-out;
+}
+main h1{
+    text-align: center;
+}
+.worlds {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 15px;
+    align-items: flex-start; /* This prevents all items from growing together */
+}
+.world {
+    background: #333;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex; /* Change from block to flex */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    width: 100%; /* Ensure it takes the full width */
+    box-sizing: border-box; /* Prevent width issues due to padding */
+    margin-top: 10px;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color */
+    border-radius: 10px;
+}
+
+.btn2 {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color */
+    border-radius: 10px;
+    align-items: center;
+}
+
+.btn3 {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex; /* Change from block to flex */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    width: 100%; /* Ensure it takes the full width */
+    box-sizing: border-box; /* Prevent width issues due to padding */
+    margin-top: 10px;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color */
+    border-radius: 10px;
+}
+
+.full-description {
+    display: none;
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.show-description .full-description {
+    display: block;
+}
+@media (min-width: 768px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+    main {
+        margin-left: 270px;
+    }
+}
+
+
+/* START OF IMG DIV */
+img {
+    border-radius: 5px;
+    width: 280px; /* Set your desired width for the small images in the grid */
+    height: 160px; /* Set your desired height for the small images in the grid */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    display: block; /* Removes any unwanted space below the image */
+    margin: 0 auto; /* Centers the image horizontally */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Ensure the parent container does not clip the scaled image */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Image styling */
+.expandable-img {
+    border-radius: 5px;
+    width: 280px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    will-change: transform; /* Optimize rendering */
+}
+
+/* Allow the image to scale outside its container */
+.image-container:hover .expandable-img {
+    transform: scale(1.05);
+    filter: blur(1px) brightness(80%);
+    z-index: 2; /* Ensure it's above other elements */
+    position: relative;
+}
+
+/* Text overlay */
+.expand-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Prevent interaction issues */
+    z-index: 99;
+}
+
+/* Show text when hovering */
+.image-container:hover .expand-text {
+    opacity: 1;
+}
+/* END OF IMG */
+
+
+
+
+/* OVERLAY BACKGROUND */
+.overlay-popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+    z-index: 9999;
+}
+
+/* IMAGE POPUP */
+.overlay-popup-image img {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+    transform: scale(0.8); /* Start small */
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: 0px 0px 50px rgba(189, 189, 189, 0.4);
+}
+
+/* SHOW OVERLAY (Background fades in) */
+.overlay-popup-image.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0s;
+}
+
+/* SHOW IMAGE (Image scales in) */
+.overlay-popup-image.show img {
+    transform: scale(1); /* Scale to full size */
+    opacity: 1; /* Fully visible */
+}
+
+/* Clicking the background will remove 'show' */
+
+
+
+/* Blurred transition effect */
+.blurred {
+    filter: blur(4px) brightness(30%);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none; /* Initially hidden */
+}
+
+/* Center the spinner inside the image */
+.overlay-popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Position the spinner inside the image */
+.overlay-popup-image img {
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+/* Make sure the spinner is inside the image */
+.overlay-popup-image .loading-spinner {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensure it's above the image */
+}
+
+/* Animation for spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Left button */
+.left {
+    left: 20px;
+}
+
+/* Right button */
+.right {
+    right: 20px;
+}
+
+
+
+

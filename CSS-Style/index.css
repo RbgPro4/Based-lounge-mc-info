@@ -86,6 +86,12 @@ header {
     box-sizing: border-box;
     align-items: center;
     text-align: center;
+    border: 1px solid hsl(199, 92%, 59%);
+    box-shadow: 0px 0px 8px hsl(199, 92%, 59%, 1);
+}
+.box2 a {
+    /* Makes each <a> "display: block;" tag take up the full width of the container */
+    margin-top: 10px; /* Optional: adds space between the buttons */
 }
 .box2 h2 {
     margin-top: 1%;
@@ -122,6 +128,7 @@ header {
 .box4 h2 {
     margin-top: 1%;
 }
+
 
 .container-main-page {
     width: 90%;
@@ -243,21 +250,35 @@ header {
 
 .changes-container {
     background-color: #383838;
-    padding: 20px 15px; /* Increased padding for better spacing inside */
+    padding: 20px 15px;
     border-radius: 8px;
-    text-align: left; /* Align text to the left for better readability */
+    text-align: left;
     font-weight: bold;
     white-space: normal;
     word-wrap: break-word;
     max-width: 100%;
     box-sizing: border-box;
-    line-height: 1.6; /* Adjust line height for spacing between lines */
+    line-height: 1.6;
     text-align: center;
     box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.5);
+    
+    /* Scrolling */
+    max-height: 470px; /* Adjust height as needed */
+    overflow-y: auto;  /* Enables scrolling */
 }
 
-.changes-container p {
-    margin-bottom: 10px; /* Adds space between paragraphs */
+/* Optional: Custom Scrollbar Styling */
+.changes-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.changes-container::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.changes-container::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
 }
 
 .build-container {
@@ -265,7 +286,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column; /* Ensures content is stacked vertically */
-    gap: 10px;
+    gap: 15px;
     margin-top: 15px;
 }
 

@@ -64,14 +64,14 @@ header {
     background-color: #2b2b2b;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0px 0px 8px hsl(29, 93%, 58%, 1); /* box-shadow: 0px 0px 8px hsla(0, 92%, 59%, 1); */
+    box-shadow: 0px 0px 8px hsl(98, 84%, 52%, 1); /* box-shadow: 0px 0px 8px hsla(0, 92%, 59%, 1); */
     flex: 1 1 300px;
     min-width: 300px;
     max-width: 100%;
     box-sizing: border-box;
     align-items: center;
     text-align: center;
-    border: 1px solid hsl(29, 93%, 58%);
+    border: 1px solid hsl(98, 84%, 52%);
 }
 .box1 h2 {
     margin-top: 0%;

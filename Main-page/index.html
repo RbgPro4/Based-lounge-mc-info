@@ -31,10 +31,6 @@
     setTimeout(() => {
         popupMessage.classList.remove('show'); // Slide the message back down
     }, 2000); // The message stays for 2 seconds
-
-    // Show the overlay popup (this will stay open until the user clicks "I understand")
-    const popupOverlay = document.getElementById('popup-overlay');
-    popupOverlay.classList.add('show'); // Fade in the overlay
 }
 
 function closePopup() {
@@ -74,16 +70,15 @@ function closePopup() {
         </div>
         <div class="box1">
             <h2>🌐 - Minecraft Server IP - 🌐</h2>
-            <p>Server Closed<br>
-            Server Status: <span id="span1" style="color: hsl(29, 93%, 58%);">Pending...</span> 🟠</p>
+            <p>Server Opened<br>
+            Server Status: <span id="span1" style="color: hsl(98, 84%, 52%);">Online</span> 🟢</p> <!-- hsl(29, 93%, 58%) Pending... -->
             
-            Server is currently offline until the <br>
-            community decides when to start again, <br>
-            untill then see you next time 👍<br>
+            Server is currently Online <br>
+            and joinable
 
             <div class="ip-container">
                 <button class="copy-btn" onclick="copyIP()">Copy IP</button>
-                <div class="ip-box" id="server-ip">il-dis.gl.joinmc.link</div>
+                <div class="ip-box" id="server-ip">april-painted.gl.at.ply.gg</div>
             </div>
         </div>
         <div class="box2">

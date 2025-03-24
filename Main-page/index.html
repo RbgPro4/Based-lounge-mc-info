@@ -71,14 +71,14 @@ function closePopup() {
         <div class="box1">
             <h2>🌐 - Minecraft Server IP - 🌐</h2>
             <p>Server Opened<br>
-            Server Status: <span id="span1" style="color: hsl(98, 84%, 52%);">Online</span> 🟢</p> <!-- hsl(29, 93%, 58%) Pending... -->
+            Server Status: <span id="span1" style="color: hsl(0, 92%, 59%);">Offline</span> 🔴</p> <!-- hsl(29, 93%, 58%) Pending... -->
             
-            Server is currently Online <br>
-            and joinable
+            Server is currently Offline <br>
+            and not joinable
 
             <div class="ip-container">
                 <button class="copy-btn" onclick="copyIP()">Copy IP</button>
-                <div class="ip-box" id="server-ip">april-painted.gl.at.ply.gg</div>
+                <div class="ip-box" id="server-ip">Not Available</div>
             </div>
         </div>
         <div class="box2">
@@ -178,5 +178,45 @@ function closePopup() {
     <script src="../page-scripts/check-page.js"></script>
     <script src="../page-scripts/check-connection.js"></script>
     <link rel="stylesheet" type="text/css" href="../page-scripts/script.css">
+
+
+
+    <!--checks if server is online or offline-->
+    <script>
+        async function checkServerStatus() {
+            const ip = "april-painted.gl.at.ply.gg"; // Your server IP/Domain
+            const apiUrl = `https://api.mcsrvstat.us/2/${ip}`;
+            
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                
+                if (data.online) {
+                    document.getElementById("server-status").innerHTML = "Online 🟢";
+                    document.getElementById("server-status").style.color = "hsl(98, 84%, 52%)";
+                    document.getElementById("server-text").innerHTML = "Online";
+                    document.getElementById("server-box").style.border = "1px solid hsl(98, 84%, 52%)";
+                    document.getElementById("server-box").style.boxShadow = "0px 0px 8px hsl(98, 84%, 52%)";
+                } else {
+                    document.getElementById("server-status").innerHTML = "Offline 🔴";
+                    document.getElementById("server-status").style.color = "hsl(0, 92%, 59%)";
+                    document.getElementById("server-text").innerHTML = "Offline";
+                    document.getElementById("server-box").style.border = "1px solid hsl(0, 92%, 59%)";
+                    document.getElementById("server-box").style.boxShadow = "0px 0px 8px hsl(0, 92%, 59%)";
+                }
+            } catch (error) {
+                console.error("Error fetching server status:", error);
+                document.getElementById("server-status").innerHTML = "Offline 🔴";
+                document.getElementById("server-status").style.color = "hsl(0, 92%, 59%)";
+                document.getElementById("server-text").innerHTML = "Offline";
+                document.getElementById("server-box").style.border = "1px solid hsl(0, 92%, 59%)";
+                document.getElementById("server-box").style.boxShadow = "0px 0px 8px hsl(0, 92%, 59%)";
+            }
+        }
+    
+        // Run check when page loads and update every 30 seconds
+        checkServerStatus();
+        setInterval(checkServerStatus, 30000);
+    </script>
 </body>
 </html>

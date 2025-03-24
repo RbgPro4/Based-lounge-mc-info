@@ -137,6 +137,7 @@ main {
     transition: margin-left 0.3s ease-in-out;
 }
 main h1{
+    margin-top: 0px;
     text-align: center;
 }
 .all-mod-info {

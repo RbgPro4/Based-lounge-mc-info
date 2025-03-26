@@ -448,6 +448,12 @@ img {
     right: 20px;
 }
 
+.world-loader {
+    position: relative;
+    width: 100%; /* Ensure it takes full width */
+    height: 825px; /* Ensure it takes full height */
+    overflow: hidden; /* Prevents the entire page from scrolling */
+}
 
 .blur-overlay {
     position: absolute;
@@ -455,18 +461,11 @@ img {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(14, 15, 15, 0.1);
+    background: rgba(77, 77, 77, 0.3);
     backdrop-filter: blur(10px); /* Blurs everything behind it */
     z-index: 5;
     transition: opacity 0.3s ease-in-out; /* Smooth fade-out */
     border-radius: 5px;
-}
-
-.world-loader {
-    position: relative;
-    width: 100%; /* Ensure it takes full width */
-    height: 825px; /* Ensure it takes full height */
-    overflow: hidden; /* Prevents the entire page from scrolling */
 }
 
 .wait {

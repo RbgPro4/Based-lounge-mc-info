@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="expand-text">Expand Image</span>
                         </div>
                         <h3>SMP World 6</h3>
-                        <p>Latest Backup: 26/10/2024<br>
+                        <p>Latest Backup: 16/1/23<br>
                             Version: 1.19.3 Vanilla<br>
                             World Size: 707Mb
                         </p>

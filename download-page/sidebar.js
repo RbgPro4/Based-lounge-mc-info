@@ -1,7 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const sidebar = document.querySelector(".sidebar");
 const overlay = document.querySelector(".overlay");
-const descriptions = document.querySelectorAll(".toggle-description");
 
 // Remove menuToggle reference since we're not using a button
 menuToggle.addEventListener("click", () => {
@@ -14,11 +13,6 @@ overlay.addEventListener("click", () => {
     overlay.classList.remove("active");
 });
 
-descriptions.forEach(button => {
-    button.addEventListener("click", () => {
-        button.parentElement.classList.toggle("show-description");
-    });
-});
 
 // Touch swipe detection
 let touchStartX = 0;

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const defaultErrorMessage = "Page Cannot Be Reached, Check Your Connection.";
 
     // Custom error message for when customErrorFlag is false
-    const customErrorMessage = "This Page Is Currently Been Updated, Please Stay Patient!"; // Set custom message directly here
+    const customErrorMessage = "This Page Is Currently Disabled, Check Again Later"; // Set custom message directly here
 
     button.addEventListener("click", function (event) {
       event.preventDefault();

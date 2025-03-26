@@ -45,9 +45,9 @@
         function checkMainPage() {
             setTimeout(async () => { // 1.9-second delay
                 try {
-                    let response = await fetch('Main-page/index.html', { method: 'HEAD' });
+                    let response = await fetch('Main-page/home-page.html', { method: 'HEAD' });
                     if (response.ok) {
-                        window.location.href = 'Main-page/index.html';
+                        window.location.href = 'Main-page/home-page.html';
                     } else {
                         handleRetry();
                     }

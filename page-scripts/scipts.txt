@@ -1,0 +1,23 @@
+    function copyIP() {
+    const ipText = document.getElementById("server-ip").innerText;
+    navigator.clipboard.writeText(ipText);
+
+    // Show the popup message (this is the original one with a timeout of 2 seconds)
+    const popupMessage = document.getElementById('popup-message');
+    popupMessage.classList.add('show'); // Slide-in the message
+
+    // Hide the popup message after 2 seconds
+    setTimeout(() => {
+        popupMessage.classList.remove('show'); // Slide the message back down
+    }, 2000); // The message stays for 2 seconds
+
+    // Show the overlay popup (this will stay open until the user clicks "I understand")
+    const popupOverlay = document.getElementById('popup-overlay');
+    popupOverlay.classList.add('show'); // Fade in the overlay
+}
+
+function closePopup() {
+    // Hide the overlay when the "I understand" button is clicked
+    const popupOverlay = document.getElementById('popup-overlay');
+    popupOverlay.classList.remove('show'); // Fade out the overlay
+}

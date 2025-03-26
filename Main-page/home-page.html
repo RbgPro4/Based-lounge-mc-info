@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://files.fm/thumb_show.php?i=4rvqxytfqm">
+    <title>Based Lounge</title>
+    <link rel="stylesheet" type="text/css" href="../scripts/loader.css">
+    <link rel="stylesheet" type="text/css" href="home-page.css">
+</head>
+<body>
+    <script>
+        // Detect refresh using the Performance Navigation API
+        if (performance.navigation.type === 1) {
+            // If the page was refreshed, redirect to the checking page
+            window.location.href = "../index.html";
+        }
+    </script>
+
+    <!-- This is the loader for the page -->
+    <div class="pageloader">
+        <div class="circleloader">
+            <svg viewBox="25 25 50 50">
+            <circle r="20" cy="50" cx="50"></circle>
+            </svg>
+        </div>
+        <div class="pageloader-text">BasedLounge</div>
+    </div>
+
+    <!-- This is the loader for the page -->
+    <script src="../scripts/page-loader.js"></script>
+
+        <div class="container">
+            <!-- Centered H1 Title -->
+            <h1>BasedLounge</h1>
+
+            <!-- Status Section below the H1 -->
+            <div class="status-container">
+                <h2>🌐 - Minecraft Server IP - 🌐</h2>
+                <p><strong>Server</strong> Closed</p>
+                <p><strong>Server Status:</strong> <span style="color: hsl(0, 92%, 59%);">Offline 🔴</span></p>
+                <div class="ip-container">
+                    <button onclick="copyIP()">Copy IP</button>
+                    <div class="ip-box" id="server-ip">Not Available</div>
+                </div>
+            </div>
+
+            <!-- Button Section under the Status Container -->
+            <div class="button-container">
+                <a href="../download-page/old-backup-smp-worlds.html" data-custom-error="true" class="info-detail">Archived SMP Worlds</a>
+                <a href="../mod-info-and-smp/mod-details.html" data-custom-error="true" class="info-detail">Mod Installation</a>
+                <a href="about-page.html" data-custom-error="true" class="info-detail">About Page</a>
+            </div>
+
+            <div class="created-by">
+                <h3>
+                    Created By Billy<br>
+                    Updated 26/3 - Beta<br>
+                    Page Condition: In development
+                </h3>
+                <div class="connection-text" id="connectiontext">
+                    Connection: Wait..<br>
+                    Ping: Wait..<br>
+                    Load Time: 
+                </div>
+            </div>
+    </div>
+    
+
+    <script>
+        function copyIP() {
+            var copyText = document.getElementById("server-ip");
+            var range = document.createRange();
+            range.selectNode(copyText);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+        }
+    </script>
+
+
+    <!-- All errors will stack here -->
+    <div id="error-container"></div>
+
+    <!-- JavaScript checking -->
+    <script src="../page-scripts/check-page.js"></script>
+    <script src="../page-scripts/check-connection.js"></script>
+    <link rel="stylesheet" type="text/css" href="../page-scripts/script.css">
+</body>
+</html>

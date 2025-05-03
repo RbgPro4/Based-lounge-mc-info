@@ -10,8 +10,6 @@
     <title>BasedLounge MC Server</title>
     <link rel="stylesheet" type="text/css" href="mod-details.css">
     <link rel="stylesheet" type="text/css" href="../scripts/loader.css">
-    <link rel="stylesheet" href="scripts/in-development-message.css">
-    <script src="scripts/in-development-message.js" defer></script>
 </head>
 <body>
 
@@ -22,7 +20,7 @@
                 <circle r="20" cy="50" cx="50"></circle>
                 </svg>
             </div>
-            <div class="pageloader-text">BasedLounge: Mod Details(New UI) </div>
+            <div class="pageloader-text">BasedLounge: Mod Details</div>
         </div>
 
         <!-- This is the loader for the page -->
@@ -43,8 +41,15 @@
                 <div class="mod-box">
                     <h2>Get all the mods here</h2>
                     <p>All the mods are in the folder are optimized and working, its simply drag and play ✅</p>
-                    <a target="_blank" href="https://files.fm/f/7tacazeh42" class="btn">Download</a>
+                    <a target="_blank" href="#" class="btn" id="downloadBtn">Download</a>
                 </div>
+                
+                <script>
+                    document.getElementById('downloadBtn').addEventListener('click', function (e) {
+                      e.preventDefault(); // prevent the default link behavior
+                      showErrorMessage('No Source/Mods Available');
+                    });
+                  </script>
                 
                 <div class="box">
                     <h2>Get Opifine or Forge</h2>
@@ -64,8 +69,8 @@
 
                 <h6>
                     Created By Billy<br>
-                    Updated 26/3 - Beta<br>
-                    Page Condition: In development
+                    Updated May/3<br>
+                    Page Condition: Finished
                 </h6>
 
             </div>
@@ -110,39 +115,9 @@
                         <p>All Mods Are Compatible ✅</p>
                         <div class="show-all-button" id="buttonsContainer">
                         <p>
-                            Client Side Mods:
-                            <a target="_blank" href="https://modrinth.com/mod/advancement-plaques" class="page-link-button">Advancement Plaques</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/betterf3" class="page-link-button">BetterF3</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/better-ping-display-fabric" class="page-link-button">Better Ping Display (Fabric)</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/chat-heads" class="page-link-button">Chat Heads</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/displaycase" class="page-link-button">Display Case</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/dynamiccrosshair" class="page-link-button">Dynamic Crosshair</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/fabric-api" class="page-link-button">Fabric API</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/item-highlighter" class="page-link-button">Item Highlighter</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/iceberg" class="page-link-button">Iceberg</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/ichunutil" class="page-link-button">iChunUtil</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/iris" class="page-link-button">Iris</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/legendary-tooltips" class="page-link-button">Legendary Tooltips</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/lithium" class="page-link-button">Lithium</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/ydms-mobhealthbar" class="page-link-button">YDM's Mob Health Bar</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/ping-wheel" class="page-link-button">Ping Wheel</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/prism-lib" class="page-link-button">Prism Lib</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/shulkerboxtooltip" class="page-link-button">Shulker Box Tooltip</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/sodium" class="page-link-button">Sodium</a><br>
-                            <a target="_blank" href="https://modrinth.com/plugin/simple-voice-chat" class="page-link-button">Simple Voice Chat</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/wi-zoom" class="page-link-button">WI Zoom</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/xaeros-world-map" class="page-link-button">Xaero's World Map</a><br>
-                            <a target="_blank" href="https://modrinth.com/datapack/amplified-nether" class="page-link-button">Amplified Nether</a><br>
-                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/refurbished-furniture/files/5705553" class="page-link-button">Refurbished Furniture</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/quad?version=1.21.4&loader=fabric" class="page-link-button">Quad</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/polydecorations" class="page-link-button">PolyDecorations</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/polymer" class="page-link-button">Polymer</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/more-chest-variants-lieonlion" class="page-link-button">More Chest Variants</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/macaws-paintings" class="page-link-button">Macaw's Paintings</a><br>
-                            <a target="_blank" href="https://modrinth.com/datapack/ketkets-furnicraft" class="page-link-button">KetKet's Furnicraft</a><br>
-                            <a target="_blank" href="https://modrinth.com/mod/axolotl-buckets" class="page-link-button">Axolotl Buckets</a><br>
-                    </p>
-                    </div>
+                         No Source/Mods Available   
+                        </p>
+                        </div>
                 </div>
                 <div class="info-1" id="section3">
                     <h3>How to install SMP Backup Mods</h3>
